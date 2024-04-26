@@ -1,0 +1,82 @@
+.dashboard-container {
+  width: 375px;
+  height: 812px;
+  background: #f7f8f9;
+  opacity: 1;
+  border: 2px solid #eaeceea8;
+  position: relative;
+}
+
+.settings {
+  background: #ffffff;
+  box-shadow: 0px 3px 6px #00000007;
+  width: 375px;
+  height: 68px;
+}
+
+.settings p {
+  position: relative;
+  top: 27px;
+  left: 15px;
+  width: 170px;
+  height: 22px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: left;
+  color: #1d2226;
+  text-transform: capitalize;
+}
+
+.img-icon {
+  position: relative;
+  top: 30px;
+  left: 20px;
+  width: 76px;
+  height: 76px;
+  background: transparent;
+}
+
+.img-change {
+  position: relative;
+  top: 27px;
+  width: 21px;
+  height: 23px;
+}
+
+.p-name {
+  position: relative;
+  top: -50px;
+  left: 116px;
+  width: 110px;
+  height: 18px;
+  font-size: 0.95rem;
+  text-align: left;
+  color: #1d2226;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.p-email {
+  position: relative;
+  top: -44px;
+  left: 116px;
+  width: 160px;
+  height: 17px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.description {
+  position: relative;
+  top: 18px;
+  left: 20px;
+  width: 337px;
+  height: 63px;
+  font-size: 0.9rem;
+  text-align: left;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #1d2226;
+  text-transform: capitalize;
+  line-height: 22px;
+}
