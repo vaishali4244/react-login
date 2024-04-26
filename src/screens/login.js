@@ -20,7 +20,6 @@ const Login = () => {
         user.email === logEmailRef?.current?.value &&
         user.password === logPwRef?.current?.value
       ) {
-        console.log("success");
         dispatch(setToken("ertyujhfd852@hgdhgtj"));
         navigate("/dashboard");
         setSubmit(false);
@@ -49,7 +48,6 @@ const Login = () => {
         placeholder="Enter password"
         ref={logPwRef}
       />
-      {submit && <div className="popover-email">Invalid Credentials</div>}
       <br />
       <button
         className="login-click "

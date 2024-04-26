@@ -1,12 +1,10 @@
 import { useEffect, useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import {useNavigate } from "react-router-dom";
 import { setToken, setUserData } from "../redux/reducer/userReducer";
 import "./signup.css";
 
 const Signup = () => {
-  const user = useSelector((state) => state.userDetail);
-  console.log("user", user);
 
   const emailRef = useRef("");
   const userNameRef = useRef("");
@@ -16,8 +14,6 @@ const Signup = () => {
   const agencyYesRef = useRef("");
   const agencyNoRef = useRef("");
 
-  const [errorEmail, setErrorEmail] = useState("");
-  const [errorPass, setErrorPass] = useState("");
   const [submit, setSubmit] = useState(false);
 
   const navigate = useNavigate();
@@ -59,19 +55,11 @@ const Signup = () => {
 
   useEffect(() => {
     setSubmit(false);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setErrorEmail(!emailRegex.test(emailRef.current?.value));
-    console.log(emailRegex.test(emailRef.current?.value));
   }, [emailRef.current?.value]);
 
   useEffect(() => {
     setSubmit(false);
-    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-    setErrorPass(!passwordRegex.test(passwordRef.current?.value));
-    console.log("pw test", passwordRegex.test(passwordRef.current?.value));
   }, [passwordRef.current?.value]);
-
-
 
   return (
     <div className="signup-container">
@@ -109,10 +97,7 @@ const Signup = () => {
         placeholder="Enter email address"
         ref={emailRef}
       />
-      {submit && errorEmail && (
-        <></>
-        // <div className="popover-email">Please enter a valid email address.</div>
-      )}
+     
 
       <br />
       <label className="lb-4">
@@ -124,12 +109,7 @@ const Signup = () => {
         placeholder="Enter password"
         ref={passwordRef}
       />
-      {submit && errorPass && (
-        <div className="popover-pw">
-          <></>
-          {/* Password must be at least 8 characters including a-z, A-Z and 0-9. */}
-        </div>
-      )}
+    
       <br />
 
       <label className="lb-5">Company name </label>

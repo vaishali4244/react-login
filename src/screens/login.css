@@ -111,23 +111,3 @@
   font-weight: 600;
   cursor: pointer;
 }
-
-.popover-email{
-    position: absolute;
-    top: 520px;
-    left: 20px;
-    width: 333px;
-    color: rgba(255, 0, 0, 0.8);
-    font-weight: 400;
-    font-size: 0.9rem;
-}
-
-.popover-pw{
-    position: absolute;
-    top:535px;
-    left: 20px;
-    width: 333px;
-    color: rgba(255, 0, 0, 0.8);
-    font-weight: 400;
-    font-size: 0.9rem;
-}
